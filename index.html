@@ -322,7 +322,6 @@
       <div class="slide__sub">INTERACTIVE ARCHITECTURE — From Jet Engine to Industrial Gas Turbine</div></div>
     </header>
     <div class="slide__body">
-      <p class="hub-hint">把鼠标移到下方任一<b>模块卡片</b>或<b>架构图部件</b>上即会高亮联动 · <b>点击进入</b>该模块的实拍图、SVG 原理图与图注</p>
       <div class="engine-stage">
 <svg class="engine" viewBox="0 0 1200 340" role="img" aria-label="LM2500 整机架构总图 · 点击任意模块进入">
   <defs>
@@ -387,17 +386,21 @@
       <text x="760" y="183" text-anchor="middle" font-size="12.5" fill="#8a5616">2 级 + 6 级 · 3600 rpm</text>
     </g>
 
-    <!-- exhaust + generator (m11) -->
-    <g class="zone" data-goto="m11">
-      <polygon points="900,118 1004,92 1004,248 900,222" fill="#e7e7e7" stroke="#7d8a97" stroke-width="2"/>
-      <text x="952" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5a68">排气</text>
+    <!-- exhaust (m8) -->
+    <g class="zone" data-goto="m8">
+      <polygon id="z-exh" points="900,118 1004,92 1004,248 900,222" fill="#dbe6ea" stroke="#4e7a86" stroke-width="2"/>
+      <text x="952" y="170" text-anchor="middle" font-size="14" font-weight="800" fill="#2f5660">排气</text>
+      <text x="952" y="188" text-anchor="middle" font-size="11" fill="#4e7a86">扩压器</text>
+    </g>
+    <!-- generator (m12) -->
+    <g class="zone" data-goto="m12">
       <rect id="z-gen" x="1024" y="120" width="150" height="100" rx="11" fill="#13524b" stroke="#0d3b36" stroke-width="2"/>
       <text x="1099" y="164" text-anchor="middle" font-size="17" font-weight="800" fill="#ffffff">发电机</text>
       <text x="1099" y="186" text-anchor="middle" font-size="12" fill="#bfe0d4">3600 rpm</text>
     </g>
 
-    <!-- bearings / lube (m8) -->
-    <g class="zone" data-goto="m8">
+    <!-- bearings / lube (m9) -->
+    <g class="zone" data-goto="m9">
       <circle cx="150" cy="170" r="9" fill="#fff" stroke="#1d8a4e" stroke-width="2.4"/>
       <circle cx="440" cy="170" r="9" fill="#fff" stroke="#1d8a4e" stroke-width="2.4"/>
       <circle cx="650" cy="170" r="9" fill="#fff" stroke="#1d8a4e" stroke-width="2.4"/>
@@ -413,14 +416,14 @@
       <line x1="296" y1="276" x2="296" y2="222" stroke="#7a6cc4" stroke-width="1.8" stroke-dasharray="5 4"/>
     </g>
 
-    <!-- hydraulic/servo/start (m9) -->
-    <g class="zone" data-goto="m9">
+    <!-- hydraulic/servo/start (m10) -->
+    <g class="zone" data-goto="m10">
       <rect x="400" y="276" width="214" height="46" rx="9" fill="#e0e0fb" stroke="#4f46e5" stroke-width="2"/>
       <text x="507" y="304" text-anchor="middle" font-size="14.5" font-weight="800" fill="#3730a3">液压 · 伺服 · 启动</text>
     </g>
 
-    <!-- control/sensing (m10) -->
-    <g class="zone" data-goto="m10">
+    <!-- control/sensing (m11) -->
+    <g class="zone" data-goto="m11">
       <rect x="628" y="276" width="412" height="46" rx="9" fill="#ece3fb" stroke="#6d28d9" stroke-width="2"/>
       <text x="834" y="304" text-anchor="middle" font-size="14.5" font-weight="800" fill="#5b21b6">控制 · 传感 · 保护(贯穿全机)</text>
     </g>
@@ -435,11 +438,12 @@
 <button class="modcard" data-mod="m4" style="--c:#7a6cc4"><span class="mc-top"><span class="mc-ic">⚙</span><span class="mc-no">4</span></span><span class="mc-tt">附件传动 AGB</span><span class="mc-sub">取力路径与所驱附件</span><span class="mc-pg">1 页</span></button>
 <button class="modcard" data-mod="m5" style="--c:#356ea8"><span class="mc-top"><span class="mc-ic">❂</span><span class="mc-no">5</span></span><span class="mc-tt">压气机</span><span class="mc-sub">结构 / VSV / 抽气 / 喘振</span><span class="mc-pg">5 页</span></button>
 <button class="modcard" data-mod="m6" style="--c:#c0563e"><span class="mc-top"><span class="mc-ic">🔥</span><span class="mc-no">6</span></span><span class="mc-tt">燃料与燃烧</span><span class="mc-sub">燃油输送 / 计量 / 燃烧室 / 喷嘴</span><span class="mc-pg">6 页</span></button>
-<button class="modcard" data-mod="m7" style="--c:#b06a16"><span class="mc-top"><span class="mc-ic">✺</span><span class="mc-no">7</span></span><span class="mc-tt">透平段</span><span class="mc-sub">HPT / 动力涡轮 / 冷却 / 排气</span><span class="mc-pg">4 页</span></button>
-<button class="modcard" data-mod="m8" style="--c:#1d8a4e"><span class="mc-top"><span class="mc-ic">◓</span><span class="mc-no">8</span></span><span class="mc-tt">滑油系统</span><span class="mc-sub">供 / 回 / 通风 / 干油池密封</span><span class="mc-pg">3 页</span></button>
-<button class="modcard" data-mod="m9" style="--c:#4f46e5"><span class="mc-top"><span class="mc-ic">✥</span><span class="mc-no">9</span></span><span class="mc-tt">液压·伺服·启动</span><span class="mc-sub">两套液压 / 伺服阀 / 液压启动</span><span class="mc-pg">4 页</span></button>
-<button class="modcard" data-mod="m10" style="--c:#6d28d9"><span class="mc-top"><span class="mc-ic">▥</span><span class="mc-no">10</span></span><span class="mc-tt">控制·传感·保护</span><span class="mc-sub">传感器 / 启动时序 / 保护限值</span><span class="mc-pg">4 页</span></button>
-<button class="modcard" data-mod="m11" style="--c:#14304a"><span class="mc-top"><span class="mc-ic">✦</span><span class="mc-no">11</span></span><span class="mc-tt">整机系统总图</span><span class="mc-sub">各子系统如何协同</span><span class="mc-pg">1 页</span></button>
+<button class="modcard" data-mod="m7" style="--c:#b06a16"><span class="mc-top"><span class="mc-ic">✺</span><span class="mc-no">7</span></span><span class="mc-tt">透平段</span><span class="mc-sub">HPT / 动力涡轮 / 冷却 / 轴承</span><span class="mc-pg">3 页</span></button>
+<button class="modcard" data-mod="m8" style="--c:#4e7a86"><span class="mc-top"><span class="mc-ic">♨</span><span class="mc-no">8</span></span><span class="mc-tt">排气系统</span><span class="mc-sub">扩压器 / 蜗壳 / 柔性轴 / 烟囱</span><span class="mc-pg">2 页</span></button>
+<button class="modcard" data-mod="m9" style="--c:#1d8a4e"><span class="mc-top"><span class="mc-ic">◓</span><span class="mc-no">9</span></span><span class="mc-tt">滑油系统</span><span class="mc-sub">供 / 回 / 通风 / 干油池密封</span><span class="mc-pg">3 页</span></button>
+<button class="modcard" data-mod="m10" style="--c:#4f46e5"><span class="mc-top"><span class="mc-ic">✥</span><span class="mc-no">10</span></span><span class="mc-tt">液压·伺服·启动</span><span class="mc-sub">两套液压 / 伺服阀 / 液压启动</span><span class="mc-pg">4 页</span></button>
+<button class="modcard" data-mod="m11" style="--c:#6d28d9"><span class="mc-top"><span class="mc-ic">▥</span><span class="mc-no">11</span></span><span class="mc-tt">控制·传感·保护</span><span class="mc-sub">传感器 / 启动时序 / 保护限值</span><span class="mc-pg">4 页</span></button>
+<button class="modcard" data-mod="m12" style="--c:#14304a"><span class="mc-top"><span class="mc-ic">✦</span><span class="mc-no">12</span></span><span class="mc-tt">整机系统总图</span><span class="mc-sub">各子系统如何协同</span><span class="mc-pg">1 页</span></button>
       </div>
     </div>
   </section>
@@ -2170,10 +2174,8 @@
     <div class="plist">
       <span class="t">2 级高压涡轮(HPT)</span>
       <span class="t">6 级自由动力涡轮(PT)</span>
-      <span class="t">叶片冷却</span>
-      <span class="t">轴承</span>
-      <span class="t">排气</span>
-      <span class="t">转速传感</span>
+      <span class="t">叶片冷却气路</span>
+      <span class="t">透平轴承</span>
     </div>
   </div>
 </section>
@@ -2356,14 +2358,51 @@
     </div>
   </div>
 </section>
-<section data-mod="m7" class="slide figonly" data-part="透平段" id="slide-38">
-  <header class="slide__head"><div class="slide__num">7·4</div>
-    <div><h2 class="slide__title">排气段 · 高速柔性轴 · 动力涡轮转速传感器</h2><div class="slide__sub">EXHAUST · SHAFT · NPT SENSOR</div></div>
-    <div class="slide__meta">LM2500 技术全解 · 透平段</div></header>
+<section data-mod="m8" class="slide part" data-part="排气系统" id="slide-ex">
+  <header class="slide__head"><div class="slide__num">8·1</div>
+    <div><h2 class="slide__title">排气系统</h2><div class="slide__sub">PART 8 · EXHAUST</div></div>
+    <div class="slide__meta">LM2500 技术全解 · 排气系统</div></header>
   <div class="slide__body">
-    
-    <figure class="stage">
-      <svg viewBox="0 0 1100 460" role="img" aria-label="排气扩压器剖面与高速柔性轴、PT 转速传感器、SCR 与烟囱原理图">
+    <div class="pno">PART 8</div>
+    <h1>排气系统</h1>
+    <div class="plist">
+      <span class="t">排气扩压器(剖面)</span>
+      <span class="t">排气蜗壳 / 集气箱</span>
+      <span class="t">高速柔性轴(穿排气道)</span>
+      <span class="t">动力涡轮转速传感器(NPT)</span>
+      <span class="t">SCR 脱硝 · 消声 · 烟囱</span>
+      <span class="t">排气 ≈965°F</span>
+    </div>
+  </div>
+</section>
+
+<section data-mod="m8" class="slide sxs" data-part="排气系统" id="slide-38">
+  <header class="slide__head"><div class="slide__num">8·2</div>
+    <div><h2 class="slide__title">排气段 · 扩压器 · 高速柔性轴</h2><div class="slide__sub">EXHAUST · DIFFUSER · FLEX SHAFT</div></div>
+    <div class="slide__meta">LM2500 技术全解 · 排气系统</div></header>
+  <div class="slide__body">
+    <div class="sxs-row">
+      <figure class="sxs-cell"><div class="annot-wrap">
+        <img src="lm2500_img/p-151b.jpg" alt="排气段剖视">
+        <svg class="annot-overlay" viewBox="0 0 762 396" preserveAspectRatio="xMidYMid meet" role="img" aria-label="排气段部件标注">
+          <defs>
+            <marker id="ah-ex" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#15406e"/></marker>
+            <style>.lbl rect{fill:#ffffffee;stroke:#2f6ea5;stroke-width:1.4;} .lbl text{fill:#14304a;font-weight:700;font-size:22px;} .ldr{stroke:#15406e;stroke-width:2.6;fill:none;}</style>
+          </defs>
+          <line class="ldr" x1="78" y1="40" x2="62" y2="150" marker-end="url(#ah-ex)"/>
+          <line class="ldr" x1="232" y1="40" x2="300" y2="78" marker-end="url(#ah-ex)"/>
+          <line class="ldr" x1="540" y1="40" x2="470" y2="92" marker-end="url(#ah-ex)"/>
+          <line class="ldr" x1="330" y1="356" x2="305" y2="214" marker-end="url(#ah-ex)"/>
+          <line class="ldr" x1="658" y1="356" x2="685" y2="205" marker-end="url(#ah-ex)"/>
+          <g class="lbl"><rect x="6" y="8" width="150" height="30" rx="5"/><text x="13" y="31">动力涡轮出口</text></g>
+          <g class="lbl"><rect x="170" y="8" width="122" height="30" rx="5"/><text x="177" y="31">排气流向</text></g>
+          <g class="lbl"><rect x="438" y="8" width="206" height="30" rx="5"/><text x="445" y="31">排气蜗壳 / 集气箱</text></g>
+          <g class="lbl"><rect x="250" y="358" width="150" height="32" rx="5"/><text x="257" y="382">高速柔性轴</text></g>
+          <g class="lbl"><rect x="560" y="358" width="196" height="32" rx="5"/><text x="567" y="382">联轴器 → 发电机</text></g>
+        </svg>
+      </div><figcaption>实拍 · 排气段剖视</figcaption></figure>
+      <figure class="sxs-cell">
+        <svg viewBox="0 0 1100 460" role="img" aria-label="排气扩压器剖面与高速柔性轴、PT 转速传感器、SCR 脱硝消声与烟囱原理图">
         <defs>
           <marker id="ar-hot-s38" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f1f1f"/></marker>
           <marker id="ar-mech-s38" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6f8298"/></marker>
@@ -2374,7 +2413,7 @@
         <path d="M120 150 L470 120 L470 340 L120 310 Z" fill="#eef4fb" stroke="#33536f" stroke-width="1.6"/>
         <line x1="120" y1="150" x2="470" y2="120" stroke="#33536f" stroke-width="1.6"/>
         <line x1="120" y1="310" x2="470" y2="340" stroke="#33536f" stroke-width="1.6"/>
-        <text x="295" y="100" font-size="15" text-anchor="middle" fill="#33536f">排气扩压器（剖面）</text>
+        <text x="295" y="100" font-size="15" text-anchor="middle" fill="#33536f">排气扩压器(剖面)</text>
 
         <!-- 动力涡轮 PT (左侧入口) -->
         <rect x="60" y="195" width="60" height="70" rx="9" fill="#eef4fb" stroke="#33536f" stroke-width="1.6"/>
@@ -2387,7 +2426,7 @@
 
         <!-- 高速柔性轴 穿排气道 连 PT → 发电机 -->
         <line x1="120" y1="380" x2="780" y2="380" stroke="#6f8298" stroke-width="3" marker-end="url(#ar-mech-s38)"/>
-        <text x="430" y="402" font-size="15" text-anchor="middle" fill="#6f8298">高速柔性轴（穿排气道）</text>
+        <text x="430" y="402" font-size="15" text-anchor="middle" fill="#6f8298">高速柔性轴(穿排气道)</text>
         <line x1="90" y1="265" x2="90" y2="380" stroke="#6f8298" stroke-width="1.6"/>
 
         <!-- 发电机 -->
@@ -2401,25 +2440,25 @@
         <text x="240" y="138" font-size="15" fill="#2f9e79">气隙 0.010–0.015 in</text>
         <line x1="160" y1="144" x2="236" y2="138" stroke="#2f9e79" stroke-width="1.2" stroke-dasharray="4 3"/>
 
-        <!-- 出扩压器 → SCR -->
+        <!-- 出扩压器 → SCR 脱硝/消声 -->
         <line x1="470" y1="230" x2="560" y2="230" stroke="#1f1f1f" stroke-width="3" marker-end="url(#ar-hot-s38)"/>
-        <rect x="560" y="180" width="150" height="100" rx="9" fill="#eef4fb" stroke="#33536f" stroke-width="1.6"/>
-        <text x="635" y="226" font-size="15" text-anchor="middle" fill="#33536f">SCR 脱硝</text>
-        <text x="635" y="246" font-size="15" text-anchor="middle" fill="#33536f">系统</text>
+        <rect x="560" y="180" width="160" height="100" rx="9" fill="#eef4fb" stroke="#33536f" stroke-width="1.6"/>
+        <text x="640" y="222" font-size="15" text-anchor="middle" fill="#33536f">SCR 脱硝</text>
+        <text x="640" y="244" font-size="15" text-anchor="middle" fill="#33536f">+ 消声器</text>
 
         <!-- SCR → 烟囱 -->
-        <line x1="710" y1="230" x2="800" y2="230" stroke="#1f1f1f" stroke-width="3" marker-end="url(#ar-hot-s38)"/>
-        <rect x="800" y="60" width="70" height="220" rx="9" fill="#eef4fb" stroke="#33536f" stroke-width="1.6"/>
-        <text x="835" y="172" font-size="15" text-anchor="middle" fill="#33536f" transform="rotate(-90 835 172)">烟囱</text>
-        <line x1="835" y1="230" x2="835" y2="75" stroke="#1f1f1f" stroke-width="3" marker-end="url(#ar-hot-s38)"/>
+        <line x1="720" y1="230" x2="810" y2="230" stroke="#1f1f1f" stroke-width="3" marker-end="url(#ar-hot-s38)"/>
+        <rect x="810" y="60" width="74" height="220" rx="9" fill="#eef4fb" stroke="#33536f" stroke-width="1.6"/>
+        <text x="847" y="172" font-size="15" text-anchor="middle" fill="#33536f" transform="rotate(-90 847 172)">烟囱</text>
+        <line x1="847" y1="230" x2="847" y2="75" stroke="#1f1f1f" stroke-width="3" marker-end="url(#ar-hot-s38)"/>
       </svg>
-      <div class="cap">图 38 · 排气扩压器、高速柔性轴穿排气道连 PT→发电机，经 SCR 脱硝至烟囱＼</div>
-    </figure>
+      </figure>
+    </div>
   </div>
 </section>
 
-<section data-mod="m8" class="slide part" data-part="滑油系统" id="slide-39">
-  <header class="slide__head"><div class="slide__num">8·1</div>
+<section data-mod="m9" class="slide part" data-part="滑油系统" id="slide-39">
+  <header class="slide__head"><div class="slide__num">9·1</div>
     <div><h2 class="slide__title">滑油系统</h2><div class="slide__sub">PART 7 · LUBE OIL</div></div>
     <div class="slide__meta">LM2500 技术全解 · 滑油系统</div></header>
   <div class="slide__body">
@@ -2429,9 +2468,9 @@
     <div class="plist"><span class="t">合成油供油</span><span class="t">轴承与 AGB 齿轮润滑</span><span class="t">干油池密封</span><span class="t">与发电机矿物油独立</span></div>
   </div>
 </section>
-<section data-mod="m8" class="slide sxs" data-part="滑油系统" id="slide-40">
+<section data-mod="m9" class="slide sxs" data-part="滑油系统" id="slide-40">
   <header class="slide__head">
-    <div class="slide__num">8·2</div>
+    <div class="slide__num">9·2</div>
     <div><h2 class="slide__title">滑油系统总图</h2><div class="slide__sub">LUBE OIL SYSTEM</div></div>
     <div class="slide__meta">LM2500 技术全解 · 滑油系统</div>
   </header>
@@ -2538,9 +2577,9 @@
     
   </div>
 </section>
-<section data-mod="m8" class="slide sxs" data-part="滑油系统" id="slide-41">
+<section data-mod="m9" class="slide sxs" data-part="滑油系统" id="slide-41">
   <header class="slide__head">
-    <div class="slide__num">8·3</div>
+    <div class="slide__num">9·3</div>
     <div><h2 class="slide__title">干油池密封原理</h2><div class="slide__sub">DRY-SUMP SEALS</div></div>
     <div class="slide__meta">LM2500 技术全解 · 滑油系统</div>
   </header>
@@ -2645,8 +2684,8 @@
     
   </div>
 </section>
-<section data-mod="m9" class="slide part" data-part="液压·伺服·启动" id="slide-43">
-  <header class="slide__head"><div class="slide__num">9·1</div>
+<section data-mod="m10" class="slide part" data-part="液压·伺服·启动" id="slide-43">
+  <header class="slide__head"><div class="slide__num">10·1</div>
     <div><h2 class="slide__title">液压油 · 伺服阀 · 液压启动</h2><div class="slide__sub">PART 8-9 · HYDRAULICS &amp; START</div></div>
     <div class="slide__meta">LM2500 技术全解 · 液压·伺服·启动</div></header>
   <div class="slide__body">
@@ -2656,8 +2695,8 @@
     <div class="plist"><span class="t">控制油定位 VSV</span><span class="t">液压油 · 伺服阀</span><span class="t">燃气控制阀定位</span><span class="t">注水阀定位</span><span class="t">液压启动系统</span></div>
   </div>
 </section>
-<section data-mod="m9" class="slide figonly" data-part="液压·伺服·启动" id="slide-44">
-  <header class="slide__head"><div class="slide__num">9·2</div>
+<section data-mod="m10" class="slide figonly" data-part="液压·伺服·启动" id="slide-44">
+  <header class="slide__head"><div class="slide__num">10·2</div>
     <div><h2 class="slide__title">两套液压系统</h2><div class="slide__sub">TWO HYDRAULIC SYSTEMS</div></div>
     <div class="slide__meta">LM2500 技术全解 · 液压·伺服·启动</div></header>
   <div class="slide__body">
@@ -2738,8 +2777,8 @@
   </div>
 </section>
 
-<section data-mod="m9" class="slide figonly" data-part="液压·伺服·启动" id="slide-45">
-  <header class="slide__head"><div class="slide__num">9·3</div>
+<section data-mod="m10" class="slide figonly" data-part="液压·伺服·启动" id="slide-45">
+  <header class="slide__head"><div class="slide__num">10·3</div>
     <div><h2 class="slide__title">伺服阀原理＼</h2><div class="slide__sub">SERVO VALVE</div></div>
     <div class="slide__meta">LM2500 技术全解 · 液压·伺服·启动</div></header>
   <div class="slide__body">
@@ -2832,8 +2871,8 @@
   </div>
 </section>
 
-<section data-mod="m9" class="slide sxs" data-part="液压·伺服·启动" id="slide-46">
-  <header class="slide__head"><div class="slide__num">9·4</div>
+<section data-mod="m10" class="slide sxs" data-part="液压·伺服·启动" id="slide-46">
+  <header class="slide__head"><div class="slide__num">10·4</div>
     <div><h2 class="slide__title">液压启动系统</h2><div class="slide__sub">HYDRAULIC START</div></div>
     <div class="slide__meta">LM2500 技术全解 · 液压·伺服·启动</div></header>
   <div class="slide__body">
@@ -2954,8 +2993,8 @@
     
   </div>
 </section>
-<section data-mod="m10" class="slide part" data-part="控制·传感·保护" id="slide-48">
-  <header class="slide__head"><div class="slide__num">10·1</div>
+<section data-mod="m11" class="slide part" data-part="控制·传感·保护" id="slide-48">
+  <header class="slide__head"><div class="slide__num">11·1</div>
     <div><h2 class="slide__title">控制 · 传感 · 启动时序 · 保护限值</h2><div class="slide__sub">PART 10 · CONTROL &amp; PROTECTION</div></div>
     <div class="slide__meta">LM2500 技术全解 · 控制·传感·保护</div></header>
   <div class="slide__body">
@@ -2965,8 +3004,8 @@
     <div class="plist"><span class="t">传感器布置</span><span class="t">启动时序</span><span class="t">运行限值</span><span class="t">保护动作</span></div>
   </div>
 </section>
-<section data-mod="m10" class="slide sxs" data-part="控制·传感·保护" id="slide-49">
-  <header class="slide__head"><div class="slide__num">10·2</div>
+<section data-mod="m11" class="slide sxs" data-part="控制·传感·保护" id="slide-49">
+  <header class="slide__head"><div class="slide__num">11·2</div>
     <div><h2 class="slide__title">传感器布置</h2><div class="slide__sub">SENSORS</div></div>
     <div class="slide__meta">LM2500 技术全解 · 控制·传感·保护</div></header>
   <div class="slide__body">
@@ -3049,8 +3088,8 @@
     </div>
   </div>
 </section>
-<section data-mod="m10" class="slide sxs" data-part="控制·传感·保护" id="slide-50">
-  <header class="slide__head"><div class="slide__num">10·3</div>
+<section data-mod="m11" class="slide sxs" data-part="控制·传感·保护" id="slide-50">
+  <header class="slide__head"><div class="slide__num">11·3</div>
     <div><h2 class="slide__title">启动时序图</h2><div class="slide__sub">START SEQUENCE</div></div>
     <div class="slide__meta">LM2500 技术全解 · 控制·传感·保护</div></header>
   <div class="slide__body">
@@ -3159,8 +3198,8 @@
     </div>
   </div>
 </section>
-<section data-mod="m10" class="slide figonly" data-part="控制·传感·保护" id="slide-51">
-  <header class="slide__head"><div class="slide__num">10·4</div>
+<section data-mod="m11" class="slide figonly" data-part="控制·传感·保护" id="slide-51">
+  <header class="slide__head"><div class="slide__num">11·4</div>
     <div><h2 class="slide__title">运行限值汇总与保护动作</h2><div class="slide__sub">LIMITS &amp; PROTECTION</div></div>
     <div class="slide__meta">LM2500 技术全解 · 控制·传感·保护</div></header>
   <div class="slide__body">
@@ -3255,9 +3294,9 @@
   </div>
 </section>
 
-<section data-mod="m11" class="slide figonly" data-part="整机系统总图" id="slide-52">
+<section data-mod="m12" class="slide figonly" data-part="整机系统总图" id="slide-52">
   <header class="slide__head">
-    <div class="slide__num">11·1</div>
+    <div class="slide__num">12·1</div>
     <div><h2 class="slide__title">整机系统总图 · 各子系统如何协同</h2><div class="slide__sub">SYSTEM INTEGRATION OVERVIEW</div></div>
   </header>
   <div class="slide__body">
@@ -3394,14 +3433,15 @@
   <button id="nnextmod">下一模块 ⇥</button>
 </div>
 <script>
-var MODS = [{"id": "m1", "title": "航改原理", "sub": "从飞机发动机 → 工业燃机", "color": "#2b6cb0", "slides": ["slide-05", "slide-07", "slide-08"]}, {"id": "m2", "title": "整机·框架·油池", "sub": "承力框架 / 油池 / 轴承", "color": "#0e8a6e", "slides": ["slide-10", "slide-11", "slide-13"]}, {"id": "m3", "title": "进气系统", "sub": "进气气流 / 防冰 / 隔振", "color": "#2f9e79", "slides": ["slide-14", "slide-15", "slide-17"]}, {"id": "m4", "title": "附件传动 AGB", "sub": "取力路径与所驱附件", "color": "#7a6cc4", "slides": ["slide-18"]}, {"id": "m5", "title": "压气机", "sub": "结构 / VSV / 抽气 / 喘振", "color": "#356ea8", "slides": ["slide-20", "slide-21", "slide-23", "slide-24", "slide-25"]}, {"id": "m6", "title": "燃料与燃烧", "sub": "燃油输送 / 计量 / 燃烧室 / 喷嘴", "color": "#c0563e", "slides": ["slide-26", "slide-27", "slide-28", "slide-29", "slide-31", "slide-33"]}, {"id": "m7", "title": "透平段", "sub": "HPT / 动力涡轮 / 冷却 / 排气", "color": "#b06a16", "slides": ["slide-34", "slide-35", "slide-37", "slide-38"]}, {"id": "m8", "title": "滑油系统", "sub": "供 / 回 / 通风 / 干油池密封", "color": "#1d8a4e", "slides": ["slide-39", "slide-40", "slide-41"]}, {"id": "m9", "title": "液压·伺服·启动", "sub": "两套液压 / 伺服阀 / 液压启动", "color": "#4f46e5", "slides": ["slide-43", "slide-44", "slide-45", "slide-46"]}, {"id": "m10", "title": "控制·传感·保护", "sub": "传感器 / 启动时序 / 保护限值", "color": "#6d28d9", "slides": ["slide-48", "slide-49", "slide-50", "slide-51"]}, {"id": "m11", "title": "整机系统总图", "sub": "各子系统如何协同", "color": "#14304a", "slides": ["slide-52"]}];
+var MODS = [{"id": "m1", "title": "航改原理", "sub": "从飞机发动机 → 工业燃机", "color": "#2b6cb0", "slides": ["slide-05", "slide-07", "slide-08"]}, {"id": "m2", "title": "整机·框架·油池", "sub": "承力框架 / 油池 / 轴承", "color": "#0e8a6e", "slides": ["slide-10", "slide-11", "slide-13"]}, {"id": "m3", "title": "进气系统", "sub": "进气气流 / 防冰 / 隔振", "color": "#2f9e79", "slides": ["slide-14", "slide-15", "slide-17"]}, {"id": "m4", "title": "附件传动 AGB", "sub": "取力路径与所驱附件", "color": "#7a6cc4", "slides": ["slide-18"]}, {"id": "m5", "title": "压气机", "sub": "结构 / VSV / 抽气 / 喘振", "color": "#356ea8", "slides": ["slide-20", "slide-21", "slide-23", "slide-24", "slide-25"]}, {"id": "m6", "title": "燃料与燃烧", "sub": "燃油输送 / 计量 / 燃烧室 / 喷嘴", "color": "#c0563e", "slides": ["slide-26", "slide-27", "slide-28", "slide-29", "slide-31", "slide-33"]}, {"id": "m7", "title": "透平段", "sub": "HPT / 动力涡轮 / 冷却 / 轴承", "color": "#b06a16", "slides": ["slide-34", "slide-35", "slide-37"]}, {"id": "m8", "title": "排气系统", "sub": "扩压器 / 蜗壳 / 柔性轴 / 烟囱", "color": "#4e7a86", "slides": ["slide-ex", "slide-38"]}, {"id": "m9", "title": "滑油系统", "sub": "供 / 回 / 通风 / 干油池密封", "color": "#1d8a4e", "slides": ["slide-39", "slide-40", "slide-41"]}, {"id": "m10", "title": "液压·伺服·启动", "sub": "两套液压 / 伺服阀 / 液压启动", "color": "#4f46e5", "slides": ["slide-43", "slide-44", "slide-45", "slide-46"]}, {"id": "m11", "title": "控制·传感·保护", "sub": "传感器 / 启动时序 / 保护限值", "color": "#6d28d9", "slides": ["slide-48", "slide-49", "slide-50", "slide-51"]}, {"id": "m12", "title": "整机系统总图", "sub": "各子系统如何协同", "color": "#14304a", "slides": ["slide-52"]}];
 var ZONEMAP = {
   m1:['z-all'], m2:['z-frame'], m3:['z-intake'], m4:['z-agb'], m5:['z-comp'],
-  m6:['z-comb'], m7:['z-turb'], m8:['z-bear'], m9:['z-hyd'], m10:['z-ctrl'], m11:['z-all','z-gen']
+  m6:['z-comb'], m7:['z-turb'], m8:['z-exh'], m9:['z-bear'], m10:['z-hyd'],
+  m11:['z-ctrl'], m12:['z-all','z-gen']
 };
 // give engine zones ids matching ZONEMAP by their data-goto
 (function(){
-  var map={m3:'z-intake',m5:'z-comp',m6:'z-comb',m7:'z-turb',m8:'z-bear',m4:'z-agb',m9:'z-hyd',m10:'z-ctrl'};
+  var map={m3:'z-intake',m5:'z-comp',m6:'z-comb',m7:'z-turb',m8:'z-exh',m9:'z-bear',m4:'z-agb',m10:'z-hyd',m11:'z-ctrl'};
   document.querySelectorAll('.engine .zonelayer .zone[data-goto]').forEach(function(z){
     var id=map[z.dataset.goto]; if(id && !z.id) z.id=id;
   });
